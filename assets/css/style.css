@@ -102,25 +102,22 @@ header a,
 }
 
 .logo img,
-.nav-flex,
-.logo {
+.nav-flex {
   transition: 0.5s linear;
 }
 
 .scrolling-navbar .logo img {
-  transform: scale(0.7);
+  transform: translateX(-50%) translateY(120px) scale(0.7);
 }
 .scrolling-navbar .nav-flex {
   min-height: 70px !important;
 }
-.scrolling-navbar .logo {
-  transform: translateX(-50%) translateY(120px);
-}
 
-.logo {
+.logo img {
   transform: translateY(50%);
   position: absolute;
   left: 50%;
+  bottom: 0px;
   transform: translateX(-50%) translateY(140px);
 }
 nav a {
