@@ -203,12 +203,16 @@ header a,
   padding: 20px 84px;
 }
 .banner-text p a:first-child {
+  transform: translateX(16px);
   background-color: var(--blue-medium);
+  clip-path: polygon(0 0, 83% 0, 96% 100%, 0 100%);
   padding-left: 24px;
 }
 
 .banner-text p a:last-child {
+  transform: translateX(-12px);
   background-color: var(--orange-medium);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 13% 100%);
   padding-right: 24px;
 }
 .banner-text p .vs {
@@ -223,14 +227,15 @@ header a,
   position: absolute;
   top: 0px;
   left: 50%;
+  z-index: 2;
   transform: translateX(-50%) translateY(-13%) rotateZ(-7deg);
   background-color: transparent;
 }
-.banner-text .breaker {
+/* .banner-text .breaker {
   transform: translateX(-50%) translateY(-20%) rotateZ(-30deg);
 
   width: 40px;
   height: 120px;
   background-color: red;
-}
+} */
 /*---------END OF BANNER-----  */
