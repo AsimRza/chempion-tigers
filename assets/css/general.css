@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-dark-opacity: rgba(28, 36, 93, 0.75);
+  --blue-dark: #1c245d;
+  --blue-medium: #11183e;
+  --blue-medium-opacity: rgb(17, 24, 62, 0.9);
+  --orange-medium: #ffa54b;
+  --gray-medium: #888888;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+.container,
+.container-small {
+  width: 1200px;
+  padding: 0px 16px;
+  margin: 0px auto;
+}
+.container-small {
+  width: 900px !important;
+}
+
+.btn {
+  display: inline-block;
+  position: relative;
+}
+
+.btn a {
+  border: none;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-orange {
+  background-color: var(--orange-medium);
+}
+.btn-orange a {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-medium a {
+  font-size: 18px;
+  padding: 24px 40px;
+}
+
+.btn-orange::after {
+  content: "";
+  position: absolute;
+  left: -100px;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 5px;
+  z-index: 1;
+  background-color: var(--blue-dark);
+  transition: 0.2s linear;
+}
+.btn-orange:hover::after {
+  height: 100%;
+}
