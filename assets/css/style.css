@@ -212,7 +212,7 @@ header a,
 .banner-text p a:last-child {
   transform: translateX(-12px);
   background-color: var(--orange-medium);
-  clip-path: polygon(task/style-update0 0, 100% 0%, 100% 100%, 13% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 13% 100%);
   padding-right: 24px;
 }
 .banner-text p .vs {
