@@ -9,9 +9,11 @@
   --blue-dark-opacity: rgba(28, 36, 93, 0.75);
   --blue-dark: #1c245d;
   --blue-medium: #11183e;
+  --blue-300: #242b56;
   --blue-medium-opacity: rgb(17, 24, 62, 0.9);
   --orange-medium: #ffa54b;
   --gray-medium: #888888;
+  --base: 4px;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -27,12 +29,12 @@ ul {
 
 .container,
 .container-small {
-  width: 1200px;
+  width: 1140px;
   padding: 0px 16px;
   margin: 0px auto;
 }
 .container-small {
-  width: 900px !important;
+  width: 840px !important;
 }
 
 .btn {
@@ -52,7 +54,11 @@ ul {
 .btn-orange {
   background-color: var(--orange-medium);
 }
-.btn-orange a {
+.btn-primary {
+  background-color: var(--blue-medium);
+}
+.btn-orange a,
+.btn-primary a {
   position: relative;
   z-index: 2;
 }
@@ -62,18 +68,31 @@ ul {
   padding: 24px 40px;
 }
 
-.btn-orange::after {
+.btn-small a {
+  font-size: 16px;
+  padding: 12px 32px;
+}
+
+.btn-orange::after,
+.btn-primary::after {
   content: "";
   position: absolute;
   left: -100px;
   left: 0px;
   bottom: 0px;
   width: 100%;
-  height: 5px;
+  height: 3px;
   z-index: 1;
-  background-color: var(--blue-dark);
   transition: 0.2s linear;
 }
-.btn-orange:hover::after {
+.btn-orange::after {
+  background-color: var(--blue-dark);
+}
+
+.btn-primary::after {
+  background-color: var(--orange-medium);
+}
+.btn-orange:hover::after,
+.btn-primary:hover::after {
   height: 100%;
 }
